@@ -9,8 +9,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/amacneil/dbmate/pkg/dbmate"
-	"github.com/amacneil/dbmate/pkg/dbutil"
+	"github.com/Amandeepsinghghai/dbmate/pkg/dbmate"
+	"github.com/Amandeepsinghghai/dbmate/pkg/dbutil"
 
 	"github.com/lib/pq"
 )
@@ -94,7 +94,8 @@ func connectionArgsForDump(u *url.URL) []string {
 	for _, schema := range schemas {
 		schema = strings.TrimSpace(schema)
 		if schema != "" {
-			out = append(out, "--schema", schema)
+			// Remove schema parameter for dump to contain cross-schema objects like extensions
+			// out = append(out, "--schema", schema)
 		}
 	}
 	out = append(out, u.String())
@@ -340,7 +341,7 @@ func (drv *Driver) DeleteMigration(db dbutil.Transaction, version string) error 
 func (drv *Driver) Ping() error {
 	// attempt connection to primary database, not "postgres" database
 	// to support servers with no "postgres" database
-	// (see https://github.com/amacneil/dbmate/issues/78)
+	// (see https://github.com/Amandeepsinghghai/dbmate/issues/78)
 	db, err := drv.Open()
 	if err != nil {
 		return err

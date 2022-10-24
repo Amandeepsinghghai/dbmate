@@ -9,8 +9,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/amacneil/dbmate/pkg/dbmate"
-	"github.com/amacneil/dbmate/pkg/dbutil"
+	"github.com/Amandeepsinghghai/dbmate/pkg/dbmate"
+	"github.com/Amandeepsinghghai/dbmate/pkg/dbutil"
 
 	_ "github.com/go-sql-driver/mysql" // database/sql driver
 )

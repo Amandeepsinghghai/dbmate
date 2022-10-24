@@ -7,8 +7,8 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/amacneil/dbmate/pkg/dbmate"
-	"github.com/amacneil/dbmate/pkg/dbutil"
+	"github.com/Amandeepsinghghai/dbmate/pkg/dbmate"
+	"github.com/Amandeepsinghghai/dbmate/pkg/dbutil"
 
 	"github.com/stretchr/testify/require"
 )

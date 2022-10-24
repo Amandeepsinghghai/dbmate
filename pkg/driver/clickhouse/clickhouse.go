@@ -10,8 +10,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/amacneil/dbmate/pkg/dbmate"
-	"github.com/amacneil/dbmate/pkg/dbutil"
+	"github.com/Amandeepsinghghai/dbmate/pkg/dbmate"
+	"github.com/Amandeepsinghghai/dbmate/pkg/dbutil"
 
 	"github.com/ClickHouse/clickhouse-go"
 )
@@ -315,7 +315,7 @@ func (drv *Driver) DeleteMigration(db dbutil.Transaction, version string) error 
 func (drv *Driver) Ping() error {
 	// attempt connection to primary database, not "clickhouse" database
 	// to support servers with no "clickhouse" database
-	// (see https://github.com/amacneil/dbmate/issues/78)
+	// (see https://github.com/Amandeepsinghghai/dbmate/issues/78)
 	db, err := drv.Open()
 	if err != nil {
 		return err
