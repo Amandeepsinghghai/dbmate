@@ -251,7 +251,7 @@ func ensureDir(dir string) error {
 	return nil
 }
 
-const migrationTemplate = "-- migrate:up\n\n\n-- migrate:down\n\n"
+const migrationTemplate = "-- migrate:up transaction:false\n\n\n-- migrate:down transaction:false\n\n"
 
 // NewMigration creates a new migration file
 func (db *DB) NewMigration(name string) error {
